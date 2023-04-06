@@ -18,6 +18,10 @@
    
 3. product/
    1. models
-      1. Product (class)]
+      1. Product (class)
          1. name
          2. price
+         3. python manage.py makemigrations product
+            - models -> DB를 만들기 위한 py 만들기
+         4. python manage.py migrate product
+            - DB를 만들기 위한 -> DB 테이블 만들기
