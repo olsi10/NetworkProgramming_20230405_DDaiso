@@ -5,5 +5,5 @@ from django.db import models
 
 class Product(models.Model): # 열에 들어감
     name = models.CharField(max_length=20)
-    # price = models.PositiveSmallIntegerField(0)
     price = models.IntegerField(validators=[MinValueValidator(0)])
+    # price = models.PositiveIntegerField(0)
