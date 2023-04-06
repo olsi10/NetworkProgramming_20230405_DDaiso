@@ -25,6 +25,8 @@
             - models -> DB를 만들기 위한 py 만들기
          4. python manage.py migrate product
             - DB를 만들기 위한 -> DB 테이블 만들기
+         5. \_\_str\_\_()
+            - 클래스를 보기 쉽게 하는 함수
    2. admin
       1. Product
       2. python manage.py createsuperuser
