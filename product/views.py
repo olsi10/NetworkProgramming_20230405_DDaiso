@@ -7,4 +7,6 @@ from product.models import Product
 # Create your views here.
 
 class ProductListView(ListView):
-    model = Product # 보여줄 거는 프로덕트다.
+    model = Product
+    # 보여줄 거는 프로덕트다.
+    # 'product_list', {'product_list' : Product.object.all() }
