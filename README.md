@@ -34,13 +34,13 @@
    3. R: Product List
       1. views
          1. ProductListView
-
       2. urls
          1. product : list
-
       3. templates/product
          1. product_list.html
    
    4. R: Product Detail
       1. views
          1. ProductDetailView
+      2. urls
+         1. product : detail
