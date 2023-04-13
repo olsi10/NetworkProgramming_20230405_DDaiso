@@ -19,5 +19,5 @@ class ProductDetailView(DetailView):
 class ProductCreateView(CreateView):
     model = Product
     fields = ['name', 'price']      # '__all__' 으로도 할 수 있다.
-    template_name_suffix = '_creat' # product_form.html -> product_create.html
-    success_url = reverse_lazy('product:list') # 추가 성공하면, 이동할 url 이름
+    template_name_suffix = '_create'     # product_form.html -> product_create.html
+    success_url = reverse_lazy('product:list')    # 추가 성공하면, 이동할 url 이름
