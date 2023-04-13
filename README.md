@@ -53,4 +53,9 @@
    5. C: Aadd Product 
       1. views
          1. ProductCreateView
+      2. urls
+         1. product : add
+         2. 
+      3. templates
+         1. 
          
