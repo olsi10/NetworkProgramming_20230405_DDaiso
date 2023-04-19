@@ -29,7 +29,7 @@
             <td><a href="{% url 'product:detail' pk=product.id %}">{{ product.name }}</a></td>
             <td>{{ product.price }} 원</td>
             <th><a href="{% url 'product:edit' pk=product.id %}"><button>EDIT</button></a></th>
-            <td>REMOVE</td>
+            <td><a href="{% url 'product:remove' pk=product.id %}"><button>REMOVE</button></a></td>
         </tr>
         {%  endfor %}
 

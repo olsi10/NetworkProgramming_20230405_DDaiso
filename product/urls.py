@@ -8,6 +8,7 @@ urlpatterns = [ # 프로덕트 리스트뷰를 호출하는구나~~~
     path('list/', views.ProductListView.as_view(), name='list'), # product : list
     path('detail/<int:pk>/', views.ProductDetailView.as_view(), name='detail'), # product : detail
     path('add/', views.ProductCreateView.as_view(), name='add'),
-    path('edit/<int:pk>/', views.ProductUpdateView.as_view(), name='edit') # product:edit
+    path('edit/<int:pk>/', views.ProductUpdateView.as_view(), name='edit'), # product:edit
+    path('remove/<int:pk>/', views.ProductDeleteView.as_view(), name='remove') # product:remove
 
 ]
