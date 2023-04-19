@@ -67,5 +67,7 @@
          1. ProductUpdateView
       2. urls
          1. product:edit
-      3. templates
+      3. templates/product
+         1. product_update.html
+         2. product_list.html
          
