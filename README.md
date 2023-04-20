@@ -87,4 +87,13 @@
 
 4. DDaiso/urls
    1. / -> home(ProductListView)
+   
+5. feature/cloudtype
+   1. Local Terminal
+      1. pip freeze > requirements.txt
+   2. Source
+      1. ALLOWED_HOSTS = ['*'] in settings.py
+   3. Sever Terminal
+      1. python manage.py makemigrations
+      2. python manage.py migrate
          
