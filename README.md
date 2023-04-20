@@ -84,4 +84,7 @@
       4. models
    
    8. 👽🐔😳 기능 완성~!~!~!~!~!~!
+
+4. DDaiso/urls
+   1. / -> home(ProductListView)
          
