@@ -1,10 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Add Product</title>
-</head>
-<body>
+{% extends 'base.html' %}
+
+{% block title %}Product create{% endblock %}
+
+{% block content %}
     {#  product_list : Product.objects.all() : DB에 있는 모든 Product 꺼내서 변수에 넣어주자  #}
     <form action="" method="post">
         {% csrf_token %}
@@ -12,5 +10,4 @@
         <input type="submit" value="Add">
     </form>
     <button></button>
-</body>
-</html>
+{% endblock %}

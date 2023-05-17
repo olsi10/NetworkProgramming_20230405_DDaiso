@@ -1,15 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Remove</title>
-</head>
-<body>
+{% extends 'base.html' %}
+
+{% block title %}Product confirm delete{% endblock %}
+
+{% block contnet %}
     <form action="" method="post">
         {%  csrf_token %}
         {{ product }} 지울겨? <!-- __str__ 함수 써서 우리가 읽을 수 있게 나옴 -->
         <input type="submit" value="찐?">
         <input type="button" value="취소" onclick="history.back()">
     </form>
-</body>
-</html>
+{% endblock %}
