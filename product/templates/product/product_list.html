@@ -2,12 +2,13 @@
 
 {% block title %}Product list{% endblock %}
 
+{% block content %}
 {#    {% for product in product_list%}#}
 {#        {{ product.name }} || {{ product.price }}#}
 {#    {% endfor %}#}
     {#  product_list : Product.objects.all() : DB에 있는 모든 Product 꺼내서 변수에 넣어줌 #}
-    <a href="{% url 'product:add' %}">Add Product</a>
-    <table>
+    <a class="btn btn-success" href="{% url 'product:add' %}">Add Product</a>
+    <table class="table">
         <thead>
         <tr>
             <th>#</th>
@@ -22,13 +23,14 @@
         {# 여기가 반복 #}
         {% for product in product_list %}
         <tr>
-            <td>{{ forloop.counter }}</td>
-            <td><a href="{% url 'product:detail' pk=product.id %}">{{ product.name }}</a></td>
-            <td>{{ product.price }} 원</td>
-            <th><a href="{% url 'product:edit' pk=product.id %}"><button>EDIT</button></a></th>
-            <td><a href="{% url 'product:remove' pk=product.id %}"><button>REMOVE</button></a></td>
+            <td class="align-middle">{{ forloop.counter }}</td>
+            <td  class="align-middle"><a href="{% url 'product:detail' pk=product.id %}">{{ product.name }}</a></td>
+            <td  class="align-middle">{{ product.price }} 원</td>
+            <th  class="align-middle"><a href="{% url 'product:edit' pk=product.id %}"><button class="btn btn-primary">EDIT</button></a></th>
+            <td  class="align-middle"><a href="{% url 'product:remove' pk=product.id %}"><button class="btn btn-danger">REMOVE</button></a></td>
         </tr>
         {%  endfor %}
 
         </tbody>
     </table>
+{% endblock %}

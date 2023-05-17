@@ -101,3 +101,6 @@
 6. feature/boostrap
    1. extends 'base.html'; block title content
       1. add DIRS in TEMPLATES in setting.py
+   2. static/css/bootstrap.min.css, static/js/bootstrap.min.js
+      1. add STATIC_ROOT, STATICFILES_DIRS in setting.py
+   3. add Bootstrap class in .html
