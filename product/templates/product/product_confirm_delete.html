@@ -2,11 +2,11 @@
 
 {% block title %}Product confirm delete{% endblock %}
 
-{% block contnet %}
+{% block content %}
     <form action="" method="post">
         {%  csrf_token %}
-        {{ product }} 지울겨? <!-- __str__ 함수 써서 우리가 읽을 수 있게 나옴 -->
-        <input claas="" type="submit" value="찐?">
+        {{ product }}, 지울겨? <!-- __str__ 함수 써서 우리가 읽을 수 있게 나옴 -->
+        <input type="submit" value="찐?">
         <input type="button" value="취소" onclick="history.back()">
     </form>
 {% endblock %}
