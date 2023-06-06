@@ -9,6 +9,6 @@
     <li>{{ product.name }}</li>
     <li>{{ product.price }}</li>
 </ul>
-<a class="btn btn-primary" href="{% url 'product:list' %}">집으로 가</a>
+<a class="btn btn-primary" href="{% url 'product:list2' %}">집으로 가</a>
 <a class="btn btn-warning" href="{% url 'product:edit' pk=product.id %}">수정</a>
 {%  endblock %}

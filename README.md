@@ -105,4 +105,18 @@
       1. add STATIC_ROOT, STATICFILES_DIRS in setting.py
    3. add Bootstrap class in .html
    4. pagination
-      1. 
+
+7. feature/FBV
+   1. FBV list_product
+      1. product/views
+      2. product/urls
+      3. DDaiso/urls
+   2. FBV detail_product
+      1. product/views
+      2. product/urls
+      3. product/templates/product/product_list.html, product_datail.html
+   3. FBV create_product
+      1. product/forms
+      2. product/views
+      3. product/urls
+      4. product/templates/product/product_list.html
