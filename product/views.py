@@ -73,3 +73,13 @@ def detail_product(request, pk):
     product = Product.objects.get(pk=pk) # db에서 pk가 pk인 product 하나 가져오자
     context = {'product': product} # product라는 키로 놓자
     return render(request, 'product/product_detail.html', context) # product_detail.html에게 product라는 번수로 product를 보내자
+
+def delete_prodct(request, pk):
+    if request.method == 'POST': # 사용자가 입력하고 삭제!!! 버튼 눌렀을 때
+        product = Product.objects.get(pk=pk)
+        product.delete()
+        return redirect('product:list2')
+    else:
+        product = Product.objects.get(pk=pk)
+
+    return render(request, 'product/product_confirm_delete.html', {'product' : product})
