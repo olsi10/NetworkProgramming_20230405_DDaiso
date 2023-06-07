@@ -114,9 +114,14 @@
    2. FBV detail_product
       1. product/views
       2. product/urls
-      3. product/templates/product/product_list.html, product_datail.html
+      3. product/templates/product/product_list.html, product_detail.html
    3. FBV create_product
       1. product/forms
       2. product/views
       3. product/urls
       4. product/templates/product/product_list.html
+   4. FBV update_product
+      1. product/forms
+      2. prodduct/views
+      3. product/urls
+      3. product/templates/product/product_list.html, product_detail.html
