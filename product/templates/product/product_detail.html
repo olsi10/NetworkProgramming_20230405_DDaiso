@@ -6,8 +6,16 @@
 <h1>{{ product }}</h1>
 <ul>
     <li>{{ product.id }}</li>
+    <li>
+        {% if product.image %}
+            <img class="image-detail" src="{{ product.image.url }}">
+        {% else %}
+            사진 없음
+        {% endif %}
+    </li>
     <li>{{ product.name }}</li>
     <li>{{ product.price }}</li>
+
 </ul>
 <a class="btn btn-primary" href="{% url 'product:list2' %}">집으로 가</a>
 <a class="btn btn-warning" href="{% url 'product:edit2' pk=product.id %}">수정</a>

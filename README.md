@@ -129,3 +129,37 @@
       1. product/views
       2. product/urls
       3. product/templates/product/product_list.html
+   
+8. feature/upload_image
+   1. settings
+      1. MEIDA_ROOT, MEDIA_URL   in setting.py
+      2. ulrs
+      ```python
+      urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)      
+      ```
+      3. python -m pip install pillow in Teriminal (이미치 처리하는 이미지)
+      
+   2. models ImageFeild(upload to=)
+      1. product/models
+      2. python manage.py makemigrations product
+      3. python manage.py migrate product
+      
+   3. admin
+   4. R: Product List
+      1. product/templates/product/product_list
+      2. templates/base.html
+      3. static/css/style.css
+   5. R: Product Detail
+      1. product/templates/product/product_detail
+      2. static/css/style.css
+      
+   6. C: Add Product
+      1. product/forms
+      2. product/views
+      3. product/template/product/product_create
+
+   7. U: Edit Product
+      1. product/forms
+      2. product/views
+      3. product/templates/product/product_udpate
+      4. 

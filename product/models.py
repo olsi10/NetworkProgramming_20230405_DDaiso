@@ -10,6 +10,13 @@ class Product(models.Model): # 열에 들어감
     price = models.IntegerField(validators=[MinValueValidator(0)])
     # price = models.PositiveIntegerField(0)
 
+
+    # 빈칸으로 두면 아까 media 폴더 만들어 둔 곳에 올라감
+    # 뭐 쓰면  media/product_images/ 이렇게 들어감
+    # Y는 소문자로 하면 yy, 날짜안에 이미지가 들어감
+    image = models.ImageField(upload_to='product_images/%Y/%m/%d', null=True, blank=True) # 값이 없거나 비어있어도 허락한다는 것
+
+
     def __str__(self):
         return f'{self.name} : {self.price}'
 

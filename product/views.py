@@ -31,7 +31,7 @@ class ProductCreateView(CreateView):
 
 def create_product(request):
     if request.method == 'POST': # 사용자가 입력하고 submit 버튼 눌렀을 때
-        form = ProductCreationForm(request.POST) # 입력하 내용이 이 변수에 들어감
+        form = ProductCreationForm(request.POST, request.FILES) # <<<< 시험 주의~!~!~~! files는 request.FILES로 꼭 지정해줘야 함
         if form.is_valid(): # form을 검사하자
             form.save()     # form에 있는 정보를 저장하자
         return redirect('product:list2') # 저장 하고 product_list2로 넘어가자
@@ -47,13 +47,14 @@ class ProductUpdateView(UpdateView):
     # success_url = reverse_lazy('product:list') # 수정 성공하면, 이동할 url 이름
 
 def update_product(request, pk):
+    product = Product.objects.get(pk=pk)
     if request.method == 'POST': # 사용자가 입력하고 submit 버튼 눌렀을 때
-        form = ProductChangeForm(request.POST) # form에 있는 내용 가져오자
+        form = ProductChangeForm(request.POST, request.FILES, instance=product) # form에 있는 내용 가져오자
         if form.is_valid(): # form 검사하자
-            selected_product = Product.objects.get(pk=pk) # pk로 Product에서 하나 꺼내자
-            selected_product.name =  form.cleaned_data.get('name') # 입력한 내용으로 product 수정하자
-            selected_product.price = form.cleaned_data.get('price')
-            selected_product.save()
+            # selected_product = Product.objects.get(pk=pk) # pk로 Product에서 하나 꺼내자
+            # selected_product.name =  form.cleaned_data.get('name') # 입력한 내용으로 product 수정하자
+            # selected_product.price = form.cleaned_data.get('price')
+            form.save()
         return redirect('product:detail2', pk=pk)# 이동~!
 
         # product 저장
