@@ -6,6 +6,13 @@
     <form action="" method="post">
         {%  csrf_token %}
         {{ product }}, 지울겨? <!-- __str__ 함수 써서 우리가 읽을 수 있게 나옴 -->
+        <div>
+            {% if product.image %}
+                <img src="{{ product.image.url }}" alt="{{ product }}" class="image-detail">
+            {% else %}
+                <p style="font-size: 100px">사진 없음</p>
+            {% endif %}
+        </div>
         <input type="submit" value="찐?">
         <input type="button" value="취소" onclick="history.back()">
     </form>

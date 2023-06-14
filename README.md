@@ -162,4 +162,6 @@
       1. product/forms
       2. product/views
       3. product/templates/product/product_udpate
-      4. 
+
+   8. D: Remove Product
+      1. product/templates/product/product_confirm_delete
